@@ -88,7 +88,7 @@ const Compras = () => {
             purchase_units: [{
               description: 'Compra de productos',
               amount: {
-                value: (total / 100).toFixed(2),  // Asegúrate de que sea un número válido
+                value: (total / 100).toFixed(2), 
               }
             }]
           });
