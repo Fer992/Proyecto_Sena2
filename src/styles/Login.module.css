@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  background: linear-gradient(#1f423e, #c4fa9b);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 50px;
+  border: 1px solid#615b46;
+  border-radius: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+}
+
+input {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #533d3d;
+  border-radius: 4px;
+}
+
+button {
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #4caf50; /* Color verde */
+  color: #212517;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #759242; /* Color verde más oscuro */
+}
+
+.buttonContainer {
+  margin-top: 20px;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  color: #4caf50;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Media queries para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .form {
+    width: 90%; /* Aumenta el tamaño del formulario en pantallas pequeñas */
+    max-width: 100%;
+  }
+
+  .form input,
+  .form button {
+    font-size: 14px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+  }
+
+  .footer {
+    position: relative; /* Hace que el footer se mueva con el contenido en pantallas pequeñas */
+    padding: 20px;
+  }
+}
+
+/* Media queries para pantallas muy pequeñas (móviles en modo retrato) */
+@media (max-width: 480px) {
+  .form input,
+  .form button {
+    font-size: 13px; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+    padding: 8px; /* Reduce el padding de los campos */
+  }
+}

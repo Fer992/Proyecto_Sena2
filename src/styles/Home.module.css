@@ -1,0 +1,61 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 200px;
+  font-family: Lucida, sans-serif;
+  background: linear-gradient(#4cb964, #8dc02f);
+}
+.tittleContainer{
+  padding-top: 80px;
+}
+.home p {
+  color: #d1fab0;
+  font-size: 2.5em;
+
+}
+.callToAction{
+  color: rgb(240, 240, 98);
+  background-color: rgb(0, 39, 7);
+  padding: 5px;
+  margin-left: 20px;
+  transition: 0.5s;
+}
+
+.callToAction:hover{
+  padding: 15px;
+  cursor: pointer;
+  background: #44a173;
+  border-radius: 10px;
+  ;
+}
+
+/* Media queries para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .form {
+    width: 90%; /* Aumenta el tamaño del formulario en pantallas pequeñas */
+    max-width: 100%;
+  }
+
+  .form input,
+  .form button {
+    font-size: 14px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+  }
+
+  .footer {
+    position: relative; /* Hace que el footer se mueva con el contenido en pantallas pequeñas */
+    padding: 20px;
+  }
+}
+
+/* Media queries para pantallas muy pequeñas (móviles en modo retrato) */
+@media (max-width: 480px) {
+  .form input,
+  .form button {
+    font-size: 13px; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+    padding: 8px; /* Reduce el padding de los campos */
+  }
+}

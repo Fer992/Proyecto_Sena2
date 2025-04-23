@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color:#1a512e;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  flex: 1;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background: #63a91f;
+}
+
+/* Media queries para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .form {
+    width: 90%; /* Aumenta el tamaño del formulario en pantallas pequeñas */
+    max-width: 100%;
+  }
+
+  .form input,
+  .form button {
+    font-size: 14px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+  }
+
+  .footer {
+    position: relative; /* Hace que el footer se mueva con el contenido en pantallas pequeñas */
+    padding: 20px;
+  }
+}
+
+/* Media queries para pantallas muy pequeñas (móviles en modo retrato) */
+@media (max-width: 480px) {
+  .form input,
+  .form button {
+    font-size: 13px; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+    padding: 8px; /* Reduce el padding de los campos */
+  }
+}
+
+.carritoSection h3 {
+  font-size: 1.5rem;
+  color: #327034;
+  margin-bottom: 15px;
+}
+.carritoSection {
+  background-color: #aaecaa;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 600px;            /* Limita el ancho del carrito */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+  text-align: center;
+}
+
+.carritoSection ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.carritoSection li {
+  margin-bottom: 10px;
+}
+
+.carritoSection button {
+  background-color: rgb(255, 187, 0);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.carritoSection button:hover {
+  background-color: rgb(139, 95, 0);
+}
+
+.carritoSection input {
+  width: 50px;
+  padding: 5px;
+  margin-left: 10px;
+}

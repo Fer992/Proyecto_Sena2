@@ -1,0 +1,77 @@
+.header{
+  color: rgb(3, 0, 0);
+  background-color: #abeeab;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  font-family: Lucida, sans-serif;
+
+  font-size: 1em;
+  margin: 0;
+  text-align: center;
+  width: auto;
+  margin-bottom: 5px;
+  background: #b0d3bf;
+}
+
+.nav ul {
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+.nav li {
+  display: inline-block;
+  
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  background: #63a91f;
+  border-radius: 0px;
+}
+
+  .nav ul li a {
+    display: block;
+    padding:  20px;
+    color:rgb(43, 0, 0);
+    text-decoration:none;   
+  }
+
+  /* Media queries para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .form {
+    width: 90%; /* Aumenta el tamaño del formulario en pantallas pequeñas */
+    max-width: 100%;
+  }
+
+  .form input,
+  .form button {
+    font-size: 14px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+  }
+
+  .footer {
+    position: relative; /* Hace que el footer se mueva con el contenido en pantallas pequeñas */
+    padding: 20px;
+  }
+}
+
+/* Media queries para pantallas muy pequeñas (móviles en modo retrato) */
+@media (max-width: 480px) {
+  .form input,
+  .form button {
+    font-size: 13px; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+    padding: 8px; /* Reduce el padding de los campos */
+  }
+}

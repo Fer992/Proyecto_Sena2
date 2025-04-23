@@ -1,0 +1,90 @@
+/* Contactanos.module.css */
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url('../assets/img2.jpg'); /* Cambia esta URL por tu imagen */
+  background-size:auto;
+  background-position: center;
+  min-height: 100vh;
+  color: rgb(17, 19, 17);
+  padding: 20px;
+  box-sizing: border-box;
+  padding-top: 80px; /* Aseguramos que haya espacio encima para el navbar */
+}
+
+/* Contenedor del formulario */
+.formContainer {
+  background-color: rgba(9, 29, 1, 0.6); /* Fondo oscuro para que el formulario resalte */
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 25px;
+  justify-self: unset;
+  text-align: center;
+}
+
+/* Títulos */
+h2 {
+  margin-bottom: 20px;
+  color:#b0d3bf;
+  font-weight: bold;
+}
+
+/* Estilos del formulario */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input, .select, .textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  max-width: 300px;
+}
+
+.input {
+  width: 100%;
+}
+
+.select {
+  width: 100%;
+}
+
+.textarea {
+  width: 100%;
+  height: 150px;
+}
+
+.submitButton {
+  padding: 12px;
+  background-color: #589d62;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submitButton:hover {
+  background-color: #63a91f;
+}
+
+/* Estilos para dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 20px;
+  }
+
+  .input, .select, .textarea, .submitButton {
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+  }
+
+}
