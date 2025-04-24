@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  
+
 }
 
 input {
@@ -31,8 +31,8 @@ button {
   padding: 20px;
   border: none;
   border-radius: 10px;
-  background-color: #4caf50; /* Color verde */
-  color: #212517;
+  background-color: #ffb347; /* Color verde */
+  color: #234d20;
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   cursor: pointer;
@@ -43,7 +43,7 @@ button:hover {
 }
 
 .buttonContainer {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .toggleButton {
@@ -84,3 +84,4 @@ button:hover {
     padding: 8px; /* Reduce el padding de los campos */
   }
 }
+

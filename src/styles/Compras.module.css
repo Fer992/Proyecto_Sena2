@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  color:#1a512e;
+  color:#234d20;
 }
 
 .content {
@@ -21,7 +21,7 @@
 .footer {
   text-align: center;
   padding: 10px;
-  background: #63a91f;
+  background: #4e9f3d;
 }
 
 /* Media queries para pantallas pequeñas (móviles) */
@@ -61,7 +61,7 @@
   margin-bottom: 15px;
 }
 .carritoSection {
-  background-color: #aaecaa;
+  background-color: #d2f8d2;
   padding: 30px;
   border-radius: 8px;
   margin: 20px auto;
@@ -80,8 +80,8 @@
 }
 
 .carritoSection button {
-  background-color: rgb(255, 187, 0);
-  color: white;
+  background-color: #ffb347;
+  color: #234d20;
   padding: 5px 10px;
   border: none;
   border-radius: 5px;
@@ -90,7 +90,7 @@
 }
 
 .carritoSection button:hover {
-  background-color: rgb(139, 95, 0);
+  background-color: #b37400;
 }
 
 .carritoSection input {
