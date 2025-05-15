@@ -2,18 +2,27 @@ import React, { useState, useEffect } from 'react';
 import ProductCard from '../Components/ProductCard';
 import CategoryList from '../Components/CategoryList';
 import styles from '../styles/Compras.module.css';
+import TomateImg from '../assets/tomate.jpg';
+import ManzanaImg from '../assets/manzana.jpg';
+import PapaImg from '../assets/papa.jpg';
+import HuevosImg from '../assets/huevos.jpg';
+import FrambuesaImg from '../assets/frambuesa.jpg';
+import PepinoImg from '../assets/pepino.jpg';
+import ZapalloImg from '../assets/zapallo.jpg';
+import EspinacaImg from '../assets/espinaca.jpg';
+import BrocoliImg from '../assets/brocoli.jpg';
 
 // Lista de productos disponibles
 const productos = [
-  { id: 1, nombre: 'Tomate', precio: '1200', img: 'https://via.placeholder.com/150' },
-  { id: 2, nombre: 'Lechuga', precio: '2500', img: 'https://via.placeholder.com/150' },
-  { id: 3, nombre: 'Zanahoria', precio: '750', img: 'https://via.placeholder.com/150' },
-  { id: 4, nombre: 'Pepino', precio: '1500', img: 'https://via.placeholder.com/150' },
-  { id: 5, nombre: 'Pimiento', precio: '1200', img: 'https://via.placeholder.com/150' },
-  { id: 6, nombre: 'Cebolla', precio: '1500', img: 'https://via.placeholder.com/150' },
-  { id: 7, nombre: 'Ajo', precio: '2000', img: 'https://via.placeholder.com/150' },
-  { id: 8, nombre: 'Berenjena', precio: '2500', img: 'https://via.placeholder.com/150' },
-  { id: 9, nombre: 'Espinaca', precio: '1800', img: 'https://via.placeholder.com/150' },
+  { id: 1, nombre: 'Tomate Chonto', precio: '3200', img: TomateImg },
+  { id: 2, nombre: 'Manzana Roja', precio: '2800', img: ManzanaImg },
+  { id: 3, nombre: 'Papa Pastusa', precio: '1900', img: PapaImg },
+  { id: 4, nombre: 'Huevos criollos', precio: '6800', img: HuevosImg },
+  { id: 5, nombre: 'Frambuesa 250g', precio: '7200', img: FrambuesaImg },
+  { id: 6, nombre: 'Pepino Cohombro', precio: '3500', img: PepinoImg },
+  { id: 7, nombre: 'Zapallo', precio: '2200', img: ZapalloImg },
+  { id: 8, nombre: 'Espinaca', precio: '3500', img: EspinacaImg },
+  { id: 9, nombre: 'Brócoli', precio: '4000', img: BrocoliImg },
 ];
 
 // ID de cliente de PayPal (sandbox o producción)
@@ -24,7 +33,6 @@ const Compras = () => {
   const [paypalReady, setPaypalReady] = useState(false);
   const [pagoRealizado, setPagoRealizado] = useState(false);
 
-  // Agregar un producto al carrito
   const agregarAlCarrito = (producto) => {
     setCarrito((prevCarrito) => {
       const productoExistente = prevCarrito.find((item) => item.id === producto.id);
@@ -38,12 +46,10 @@ const Compras = () => {
     });
   };
 
-  // Eliminar un producto del carrito
   const eliminarDelCarrito = (productoId) => {
     setCarrito((prevCarrito) => prevCarrito.filter((item) => item.id !== productoId));
   };
 
-  // Incrementar cantidad con botón +
   const incrementarCantidad = (productoId) => {
     setCarrito((prevCarrito) =>
       prevCarrito.map((item) =>
@@ -52,7 +58,6 @@ const Compras = () => {
     );
   };
 
-  // Decrementar cantidad con botón -
   const decrementarCantidad = (productoId) => {
     setCarrito((prevCarrito) =>
       prevCarrito.map((item) =>
@@ -63,10 +68,8 @@ const Compras = () => {
     );
   };
 
-  // Calcular el total del carrito
   const total = carrito.reduce((acc, item) => acc + parseInt(item.precio) * item.cantidad, 0);
 
-  // Cargar el script del SDK de PayPal
   useEffect(() => {
     const script = document.createElement('script');
     script.src = `https://www.paypal.com/sdk/js?client-id=${CLIENT_ID}&currency=USD`;
@@ -74,12 +77,11 @@ const Compras = () => {
     document.body.appendChild(script);
   }, []);
 
-  // Renderizar botón de PayPal
   useEffect(() => {
     if (paypalReady && total > 0) {
       const container = document.getElementById('paypal-button-container');
       if (container) {
-        container.innerHTML = ''; // Evita la duplicación del botón
+        container.innerHTML = '';
       }
 
       window.paypal.Buttons({
@@ -88,7 +90,8 @@ const Compras = () => {
             purchase_units: [{
               description: 'Compra de productos',
               amount: {
-                value: (total / 100).toFixed(2), 
+                currency_code: 'USD',
+                value: total.toFixed(2) 
               }
             }]
           });
@@ -97,7 +100,7 @@ const Compras = () => {
           const detalles = await actions.order.capture();
           console.log('Pago completado:', detalles);
           setPagoRealizado(true);
-          setCarrito([]); // Limpiar el carrito después del pago
+          setCarrito([]);
         },
         onError: err => {
           console.error('Error de PayPal:', err);
@@ -121,7 +124,6 @@ const Compras = () => {
         </div>
       </div>
 
-      {/* Carrito de compras */}
       <div className={styles.carritoSection}>
         <h3>🧺 Carrito de compras</h3>
         <ul>
@@ -137,7 +139,13 @@ const Compras = () => {
 
         {carrito.length > 0 && (
           <>
-            <p><strong>Total:</strong> ${(total / 100).toFixed(2)} USD</p>
+            <p>
+              <strong>Total:</strong>{' '}
+              {new Intl.NumberFormat('es-US', {
+                style: 'currency',
+                currency: 'USD'
+              }).format(total)}
+            </p>
             <div id="paypal-button-container" style={{ marginTop: '1rem' }}></div>
           </>
         )}

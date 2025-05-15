@@ -11,7 +11,7 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
-      <h2>{isRegistrese ? 'Regístrate' : 'Hola! Inicia Sesión'}</h2>
+      <h2 className={styles.titulo}>{isRegistrese ? 'Regístrate' : 'Inicia Sesión'}</h2>
       {!isRegistrese ? (
         <form className={styles.form}>
       <input type="text" placeholder="Usuario" required />

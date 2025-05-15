@@ -6,9 +6,9 @@ const ProductCard = ({ producto, agregarAlCarrito }) => {
     <div className={styles.card}>
       <img src={producto.img} alt={producto.nombre} className={styles.image} />
       <h3>{producto.nombre}</h3>
-      <p>{producto.precio}</p>
+      <p>{new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(producto.precio)}</p>
       <button onClick={() => agregarAlCarrito(producto)} className={styles.addToCartButton}>
-        Añadir al carrito
+        Agregar
       </button>
     </div>
   );

@@ -8,6 +8,7 @@
   margin: 10px;
   padding: 10px;
   border-radius: 20px;
+  color: black;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -30,7 +31,7 @@ button {
   margin: 10px;
   border: none;
   border-radius: 10px;
-  background-color: #3cb340; /* Color verde */
+  background-color: #2dbff0; /* Color verde */
   color: #212517;
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

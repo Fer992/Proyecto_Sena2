@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-scroll'; // Asegúrate de importar Link desde react-scroll
+import { Link } from 'react-router-dom'; 
+import { FaTag, FaCreditCard, FaUndo } from 'react-icons/fa'; // Importando iconos
 import styles from '../styles/Home.module.css';
 
 function Home() {
@@ -16,12 +17,36 @@ function Home() {
         </p>
       </div>
       <div>
-        <Link to="./Contactanos" smooth duration={500} className={styles.callToAction}>
+        <Link to="/Contactanos" className={styles.callToAction}>
           Contáctanos
         </Link>
-        <Link to="./Login" smooth duration={500} className={styles.callToAction}>
+        <Link to="/Login" className={styles.callToAction}>
           Regístrate
         </Link>
+      </div>
+
+      {/* Cajones (cards) */}
+      <div className={styles.cardContainer}>
+        <div className={styles.card}>
+          <FaTag className={styles.icon} />
+          <h3>Ofertas del Día</h3>
+          <p>Aprovecha nuestras increíbles promociones diarias</p>
+        </div>
+        <div className={styles.card}>
+          <FaCreditCard className={styles.icon} />
+          <h3>Medios de Pago</h3>
+          <p>Aceptamos múltiples formas de pago seguras</p>
+        </div>
+        <div className={styles.card}>
+          <FaUndo className={styles.icon} />
+          <h3>Políticas de Devoluciones</h3>
+          <p>Devoluciones fáciles y rápidas en 30 días</p>
+        </div>
+      </div>
+      {/* Pie de página */}
+      <div className={styles.footer}>
+        <p>Proyecto Sena ADSO 2025</p>
+        <p><b>TiendaVirtualBalue</b></p>
       </div>
     </div>
   );

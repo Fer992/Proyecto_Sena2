@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: flex-start;
   background-image: url('../assets/img2.jpg'); /* Cambia esta URL por tu imagen */
-  background-size:auto;
+  background-size:cover;
   background-position: center;
   min-height: 100vh;
   color: rgb(17, 19, 17);
@@ -22,8 +22,8 @@
   padding: 30px;
   border-radius: 8px;
   width: 100%;
-  max-width: 300px;
-  margin-bottom: 25px;
+  max-width: 350px;
+  margin-bottom: 2px;
   justify-self: unset;
   text-align: center;
 }
@@ -31,7 +31,7 @@
 /* Títulos */
 h2 {
   margin-bottom: 20px;
-  color:#b0d3bf;
+  color:#d9dbd9;
   font-weight: bold;
 }
 
@@ -65,8 +65,8 @@ h2 {
 
 .submitButton {
   padding: 12px;
-  background-color: #589d62;
-  color: white;
+  background-color: #147a06;
+  color: black;
   border: none;
   border-radius: 5px;
   cursor: pointer;

@@ -3,7 +3,8 @@ import styles from '../styles/Announcement.module.css';
 
 function Announcement() {
   return (
-    <div className={styles.container}>Temporada de Cosecha de Mandarinas 3 </div>
+    <div className={styles.container}>
+      🔔 ¡Promo Mandarinas 2x1 🔔 </div>
   )
 }
 

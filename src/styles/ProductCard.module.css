@@ -12,14 +12,14 @@
 }
 
 .image {
-  width: 100%;
+  width: 90%;
   height: auto;
   border-radius: 8px;
 }
 
 .addToCartButton {
-  background-color: #77b67a; /* Color similar al borde */
-  color: white;
+  background-color: #56b30a; /* Color similar al borde */
+  color: black;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -30,6 +30,6 @@
 }
 
 .addToCartButton:hover {
-  background-color: #327034; /* Un verde más oscuro para el hover */
+  background-color: #b88e06; /* Un verde más oscuro para el hover */
 }
 
